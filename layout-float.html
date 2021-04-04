@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            --firstColor:  #003049;
+            --secondColor:  #D62828;
+            --orangeColor:  #F77F00;
+            --backColor:  #EAE2B7;
+            --lightColor:  #FCBF49;
+            --siteWidth: 1200px;
+            --headerHeight: 120px;
+            --footerHeight: 150px;
+            --mainHeight: calc(100vh - var(--headerHeight) - var(--footerHeight));
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 18px;
+            background-color: var(--backColor);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--firstColor);
+        }
+        
+        /* fluid, responsive */
+        div#wrapper {
+            max-width: var(--siteWidth);
+            margin: auto;
+            background-color: var(--lightColor);
+        }
+
+        header {
+            background-color: var(--firstColor);
+            height: var(--headerHeight);
+            padding: 5px;
+            position: sticky;
+            top: 0px;
+        }
+/*         header::after {
+            content: "";
+            display: block;
+            clear: both;
+        } */
+        header div#logo {
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            padding: 5px;
+        }
+        header div#logo img {
+            height: 100%;
+        }
+        header nav  {
+            position: absolute;
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        header nav a {
+            text-decoration: none;
+            color: var(--backColor);
+            padding: 5px 10px;
+        }
+        header nav a:last-child {
+            border: none;
+            font-size: 40px;
+            display: none;
+        }
+        header nav a:last-child:hover {
+            border: none;
+        }
+
+        header nav a:hover {
+            border-bottom: solid 2px var(--backColor);
+        }
+
+        main {
+            min-height: var(--mainHeight);
+        }
+        main::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        main section {
+            padding: 10px;
+        }
+        main section:nth-child(1) {
+            float: left;
+            width: 200px;
+        }
+        main section:nth-child(2) {
+            float: left;
+            width: calc(100% - 200px - 200px);
+        }       
+        main section:nth-child(3) {
+            float: right;
+            width: 200px;
+        } 
+        footer {
+            background-color: lightgray;
+            height: var(--footerHeight);
+        }
+
+        @media screen and (max-width: 840px) {
+            main section:nth-child(3) {
+                display: none;
+            } 
+            main section:nth-child(2) {
+                float: right;
+                width: calc(100% - 200px);
+            } 
+        }
+
+        @media screen and (max-width: 640px) {
+            body {
+                --headerHeight: 80px;
+            }
+
+            header nav a {
+                display: none;
+            }
+            header nav a:last-child {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div id  = "logo">
+                <img src="images/logo.jpg" alt="">
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">&equiv;</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h3>left column</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe deleniti sint dolorem perspiciatis natus quibusdam debitis. At impedit harum earum voluptatem, quis laborum</p>
+                </section>
+            <section>
+                <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, rerum aliquam! Ipsum enim eaque id minus ipsam. Obcaecati ipsa, accusamus deserunt, ipsam odit harum et impedit, nihil dolore fugit provident eveniet laboriosam. Nulla beatae sit hic quas, at necessitatibus maxime fugiat, minima eos odio amet ut voluptates. Sunt explicabo iste ipsam quaerat, sit quis modi sapiente doloribus vel. Consequatur reprehenderit nesciunt dicta, doloribus exercitationem, tenetur, voluptatem at commodi reiciendis soluta in fugiat ullam rerum iusto optio aliquam. Excepturi delectus natus quo cumque cum atque, tenetur magnam? Est magni dolorum inventore molestias aperiam eveniet! Dolor corrupti, harum voluptatibus accusamus rem tempora?</p>
+            </section>
+            <section>
+                <h3>right column</h3>
+            </section>
+            
+        </main>
+        
+
+        <footer>
+            footer
+        </footer>
+    </div>
+</body>
+</html>
