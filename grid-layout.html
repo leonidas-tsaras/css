@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            box-sizing: border-box;
+        }
+        div#container {
+            display: grid;
+            width: 100%;
+            max-width: 1200px;
+            height: 100vh;
+            grid-template-areas: 	"gallery summary"
+                                    "gallery tabs"
+                                    "related related";		
+        }
+
+        div#container > div#gallery {
+            grid-area: gallery;
+            background-color: aliceblue;
+        }
+
+        div#container > div#summary {
+            grid-area: summary;
+            background-color: beige;
+        }
+
+        div#container > div#tabs {
+            grid-area: tabs;
+            background-color: honeydew;
+        }
+
+        div#container > div#related {
+            grid-area: related;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id = "gallery">grid item 1 </div>
+        <div id = "summary">grid item 2</div>
+        <div id = "tabs">grid item 3</div>
+        <div id = "related">grid item 4</div>
+    </div>
+
+ 
+</body>
+
+</html>

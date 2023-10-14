@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        window.addEventListener("load", function() {
+            let icon = document.querySelector("section.menu-container > div:nth-child(2)");
+            let drop = document.querySelector("section.menu-container > div:nth-child(3)");
+            icon.addEventListener("click", function() {
+                drop.classList.toggle("nodisplay");
+            }); 
+        });
+    </script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            --wrapperWidth: 900px;
+            --headerHeight: 120px;
+            background-color: lightyellow;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        div#wrapper {
+            width: 100%;
+            max-width: var(--wrapperWidth);
+            height: 100vh;
+            margin: auto;
+            background-color: rgb(149, 196, 138);
+            border-top: thin solid rgb(149, 196, 138);
+        }
+
+        header {
+            width: 100%;
+            height: var(--headerHeight);
+
+            box-shadow: 3px 3px 3px lightcoral;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        section.menu-container {
+            --mainItemColor: black;
+            --mainItemBackColor: rgb(195, 195, 195);
+            --secondItemColor: black;
+            --secondItemBackColor: white;
+            --containerBackColor:rgb(189, 189, 189);
+            width: max-content;
+        }
+
+        section.menu-container > div:nth-child(1)  > nav {
+            display: inline-block;
+            position: relative;
+        }
+
+        section.menu-container > div:nth-child(1) > nav:hover > div {
+            display: block;
+        }
+
+        section.menu-container > div:nth-child(1) > nav > a {
+            padding: 5px 15px;
+            display: block;
+            color: var(--mainItemColor);
+            /* background-color: var(--mainItemBackColor); */
+        }
+
+        section.menu-container > div:nth-child(1) > nav > div {
+            display: none;
+            position: absolute;
+            /* width: 100%; */
+            /* width: 200px; */
+            width: max-content;
+            min-width: 150px;
+        }
+
+        section.menu-container > div:nth-child(1) > nav > div > a {
+            display: block;
+            color: var(--secondItemColor);
+            background-color: var(--secondItemBackColor);
+            padding: 5px 6px;
+            margin: 2px 0px;
+            transition: all 500ms;
+        }
+
+        section.menu-container > div:nth-child(1) > nav > div > a:hover {
+            padding-left: 10px;
+        }
+
+        section.menu-container > div:nth-child(2) {
+            font-size: 2rem;
+            display: none;
+        }
+
+        /* drop down menu */
+        section.menu-container > div:nth-child(3) {
+            background-color: white;
+            box-shadow: -3px 3px 3px black;
+            position: absolute;
+            width: 100%;
+            max-width: 280px;
+            right: 0px;
+            top: var(--headerHeight);
+        }
+
+        section.menu-container > div:nth-child(3) > nav > a {
+            display: block;
+            width: 100%;
+            padding: 5px 3px;
+            margin-bottom: 3px;
+            background-color: var(--mainItemBackColor);
+        }
+
+        section.menu-container > div:nth-child(3) > nav > div > a {
+            display: block;
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 2px;
+            transition: all 500ms;
+        }
+
+        section.menu-container > div:nth-child(3) > nav > div > a:hover {
+            padding-left: 10px;
+        }
+
+
+        .nodisplay {
+            display: none;
+        }
+
+        /* media queries ------------------------- */
+        /* sizes 480, 540, 600, 640, 720, 768, 800, 960  */
+        @media screen and (max-width: 800px) {
+            section.menu-container > div:nth-child(1) {
+                display: none;
+            }
+            section.menu-container > div:nth-child(2) {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id = "wrapper">
+        <header>
+            <nav id = "logo">Logo</nav>
+
+            <section class = "menu-container">
+                <div>
+                    <nav>
+                        <a href="">Top Link 1</a>
+                        <div>
+                            <a href="">Link-1-2-3-4-5-6</a>
+                            <a href="">Link 2</a>
+                            <a href="">Link 3</a>
+                        </div>
+                    </nav>
+
+                    <nav>
+                        <a href="">Top Link 2</a>
+                        <div>
+                            <a href="">Link 1</a>
+                            <a href="">Link 1</a>
+                            <a href="">Link 1</a>
+                            <a href="">Link 1</a>
+                        </div>
+                    </nav>
+
+                    <nav>
+                        <a href="">Top Link 3</a>
+                        <div>
+                        </div>
+                    </nav>
+                </div>
+
+                <div>☰</div>  <!-- burger icon -->
+
+                <div class = "nodisplay"> <!-- hidden menu -->
+                    <nav>
+                        <a href="">Top Link 1</a>
+                        <div>
+                            <a href="">Link 1</a>
+                            <a href="">Link 2</a>
+                            <a href="">Link 3</a>
+                        </div>
+                    </nav>
+
+                    <nav>
+                        <a href="">Top Link 2</a>
+                        <div>
+                            <a href="">Link 1</a>
+                            <a href="">Link 1</a>
+                            <a href="">Link 1</a>
+                            <a href="">Link 1</a>
+                        </div>
+                    </nav>
+
+                    <nav>
+                        <a href="">Top Link 3</a>
+                        <div>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+        </header>
+
+    </div>
+</body>
+</html>

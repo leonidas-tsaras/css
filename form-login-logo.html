@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(114, 127, 131);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 16px;
+        }
+
+        div#login-form {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            margin-top: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: gray 5px 5px 10px;
+        }
+        div#login-form h3 {
+            color: gray;
+            font-size: 35px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: normal;
+        }
+        div#login-form  input {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 18px;
+            border:gray 1px solid;
+            border-radius: 5px;
+        }
+
+        div#login-form  button {
+            padding: 10px;
+            background-color: rgb(7, 53, 11);
+            color:white;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 20px;
+            font-size: 17px;
+            border-radius: 5px;
+        }
+
+        div#login-form div {
+            background-color: lightgray;
+            border-top: gray 2px solid;
+            padding:20px;
+            margin-top: 20px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            text-align: center;
+        }
+
+        div#login-form div a {
+            text-decoration: none;
+            font-weight: bold;
+            color:royalblue;
+        }
+
+        div#login-form p {
+            text-align: center;
+            margin-top: -65px;
+        }
+
+        div#login-form p img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: gray 5px 5px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "login-form">
+        <p><img src="images/road.jpg" alt=""></p>
+        <h3>User Login</h3>
+        <input type="text" value = "" placeholder="Enter e-mail">
+        <input type="password" value = "" placeholder="Password">
+        <button>Login</button>
+        <div>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+</body>
+</html>
