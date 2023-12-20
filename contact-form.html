@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <script src="./js/main.js"></script>
+    <title>Contact form</title>
+    <style>
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    /*font-family: Poppins; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: black;
+    /* --primaryColor: rgb(37, 53, 81); */
+    --primaryColor: hsl(194, 20%, 20%);
+    --primaryLightColor: hsl(194, 20%, 55%);
+    --primaryVeryLightColor: hsl(194, 20%, 90%);
+}
+
+/* contact form */
+div#contact-form {
+    padding: 30px;
+    border: solid thin var(--primaryLightColor);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+div#contact-form > form > input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: var(--primaryColor);
+    font-size: 1.2rem; /* 19.2px */
+    border: solid thin var(--primaryLightColor);
+}
+
+div#contact-form > form > input:focus {
+    border: solid thin var(--primaryColor);
+}
+
+div#contact-form > form > input[type="submit"] {
+    margin-top: 2rem;
+    color: var(--primaryColor);
+    background-color: lightgray;
+}
+
+div#contact-form > form > textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: var(--primaryColor);
+    border: solid thin var(--primaryLightColor);
+    font-size: 1.2rem;
+}   
+div#contact-form > form > textarea:focus {
+    border: solid thin var(--primaryColor);
+}     
+
+div#contact-form > form > input::placeholder {
+    color: var(--primaryLightColor);
+}
+
+div#contact-form > form > textarea::placeholder {
+    color: var(--primaryLightColor);;
+}   
+
+p.error {
+    color: red;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+p.success {
+    color: green;
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+</style>
+    <script>
+        function validateContactForm() {
+            event.preventDefault();
+            let form = document.querySelector("form#contact-form");
+            let result = document.querySelector("div p#result");
+            let fullName = document.querySelector('input[placeholder="Full Name"]');
+            if(fullName.value == "") {
+                result.className = "error";
+                result.textContent = "Please fill in Full Name";
+                return;
+            }
+
+            let subject = document.querySelector('input[placeholder="Subject"]');
+            if(subject.value == "") {
+                result.className = "error";
+                result.textContent = "Please fill in Subject";
+                return;
+            }
+
+            let email = document.querySelector('input[type="email"]');
+            if(email.value == "") {
+                result.className = "error";
+                result.textContent = "Please fill in E-mail";
+                return;
+            }
+
+            let message = document.querySelector('textarea');
+            if(message.value == "") {
+                result.className = "error";
+                result.textContent = "Please fill in Message";
+                return;
+            }
+
+            //form.submit();
+            form.reset();
+            result.result.className = "success";
+            result.textContent = "Thanks for contacting us";
+        }
+
+    </script>
+</head>
+<body>
+
+        <div id="contact-form">
+            <form action = "contact.php" onsubmit="validateContactForm()">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Subject">
+                <input type="email" placeholder="E-mail">
+                <textarea maxlength="100" placeholder="Message (up to 100 characters)"></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+            <p id = "result"></p>
+        </div>
+
+</body>
+</html>
