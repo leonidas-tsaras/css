@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>grid layout</title>
     <style>
         * {
             padding: 0px;
@@ -13,60 +13,76 @@
             border: none;
             box-sizing: border-box;
         }
-        div#container {
+
+        div.product {
             display: grid;
-            /* grid-auto-flow: column;
-            grid-auto-columns: 1fr; */
-            /* grid-auto-flow: row;
-            grid-auto-rows: 1fr; */
-
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-
+            /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+            grid-template-rows: auto auto auto auto;
             width: 100%;
             max-width: 1200px;
             border: solid thin red;
         }
 
-        div#container > div {
+        div.product > div {
             padding: 2rem;
             text-align: center;
         }
 
-
-        div#container > div#gallery {
-            /* grid-column-start: 2;
-            grid-column-end: 5; */
-            /* grid-column: 2/5; */
-
-            /* grid-row: 2/4; */
+        div.product > div#gallery {
             grid-column: 1/3;
-            grid-row: 1/5;
-            background-color: rgb(18, 113, 196);
-        }
-
-        div#container > div#summary {
-            background-color: rgb(180, 180, 21);
-        }
-
-        div#container > div#tabs {
-            background-color: rgb(27, 190, 27);
-        }
-
-        div#container > div#related {
-            background-color: lightcoral;
-            grid-column: 3/5;
             grid-row: 1/4;
+            background-color: rgb(183, 211, 236);
+        }
+
+        div.product > div#summary {
+            grid-column: 3/5;
+            grid-row: 1/2;
+            background-color: rgb(180, 180, 21);
+            height: fit-content;
+        }
+
+        div.product > div#tabs {
+            grid-column: 3/5;
+            grid-row: 2/4;
+            background-color: rgb(27, 190, 27);
+            height: fit-content;
+        }
+
+        div.product > div#related {
+            background-color: lightcoral;
+            grid-column: 1/5;
+            grid-row: 4/5;
+        }
+
+        @media (width <= 800px) {
+            div.product > div#gallery {
+                grid-column: 1/5;
+                grid-row: 1/2;
+            }
+
+            div.product > div#summary {
+                grid-column: 1/5;
+                grid-row: 2/3;
+            }
+            div.product > div#tabs {
+            grid-column: 1/5;
+            grid-row: 3/4;
+        }
+
         }
     </style>
 </head>
 
 <body>
-    <div id="container">
-        <div id = "gallery">grid item 1 </div>
-        <div id = "summary">grid item 2</div>
-        <div id = "tabs">grid item 3</div>
-        <div id = "related">grid item 4</div>
+    <div class="product">
+        <div id = "gallery">
+            1 div.woocommerce-product-gallery
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti dolorem eveniet omnis facilis! Delectus ad velit dolor amet, veniam nostrum veritatis quaerat facilis deserunt quia a magnam temporibus eum aut molestias accusantium ipsa voluptatibus obcaecati modi quo neque laudantium numquam reprehenderit maxime? Illum, quasi. Minus architecto unde doloremque magnam ratione eum ducimus deleniti ipsa, error quidem iste nobis, laboriosam ad! Corrupti perferendis officia iste ipsa deleniti fuga, atque fugiat, minima, aspernatur consectetur tempora excepturi nisi ut quo quod voluptatum similique exercitationem necessitatibus dolorem sequi cum consequuntur esse ipsam. Quisquam distinctio iusto beatae rem libero earum quae tempore vero, nam accusamus totam perspiciatis dolorem temporibus optio similique harum dolorum adipisci consequatur a quaerat ipsa consectetur aspernatur consequuntur sunt. Ad cum quibusdam consectetur. Repudiandae perspiciatis nulla doloremque. Temporibus eligendi repellat ut perspiciatis vel, beatae animi placeat quod possimus rem sed aperiam ad nisi fugiat nam voluptas unde consequatur aliquam. Earum neque sed iusto consectetur officia debitis possimus incidunt, cupiditate maxime! Dolorum consequuntur numquam necessitatibus dolor ipsum esse corrupti doloribus ratione facilis praesentium aliquid sunt iure laboriosam vero, inventore hic eos minus, dolores labore temporibus repellendus. Provident voluptatum, esse reiciendis sapiente voluptas consequatur delectus quam eos nostrum molestiae numquam voluptates. Exercitationem in, rem numquam esse, nisi illum, facilis quo quam quaerat ducimus harum fugit incidunt optio consectetur fugiat debitis tempora quidem eligendi dignissimos. Sapiente hic soluta distinctio sed, quod vero culpa architecto doloribus ducimus, inventore enim ipsum, accusamus dolor velit! Fugit deserunt repudiandae odit repellendus inventore tempore numquam sed perferendis aliquam quidem, quibusdam repellat, laborum ullam quo ipsum tempora. Voluptatum mollitia ipsum saepe debitis a expedita facere doloribus minima error assumenda commodi, distinctio vero, eos asperiores corrupti nulla facilis quos. Veritatis eaque ipsam nihil, accusamus aliquam quam aliquid aut saepe. Aliquam, quos? Ullam harum cupiditate adipisci, nam, illo placeat expedita eum ex tenetur nostrum voluptatem veritatis libero voluptate molestias. Expedita quae quidem molestiae perferendis totam nemo pariatur magnam, repudiandae itaque in ipsum vitae praesentium sunt omnis provident culpa cumque minus, porro dolorum reprehenderit! Voluptate cumque adipisci nesciunt voluptatem voluptatum quos nihil minus aut beatae laborum laboriosam sapiente, cum et molestiae tempore optio voluptates soluta? Aliquam, enim nobis? Unde accusantium corporis neque cum laboriosam commodi, obcaecati quas. Enim temporibus, doloribus, eveniet debitis incidunt asperiores soluta esse unde omnis nobis illum corrupti voluptate reprehenderit veritatis sunt laboriosam eaque rem qui provident ratione? Exercitationem, ea. Eos animi placeat autem nisi sapiente temporibus voluptatem natus, quos veritatis aliquam! Vero nihil nemo laboriosam facilis itaque harum praesentium consequuntur doloribus facere ullam esse, alias quae voluptatibus, sapiente eius et. Tenetur ipsum qui libero soluta quia beatae temporibus aliquid reprehenderit esse possimus, maiores, animi earum consequatur asperiores dolores. Iste obcaecati commodi dolorem, praesentium enim provident. Eveniet non magnam quam dolorum voluptatem sunt molestias, error ducimus sed quasi pariatur labore, autem voluptates, tenetur qui id odit nam placeat. Totam vel voluptates commodi odit dolorum, ducimus nostrum! Tenetur voluptate deserunt delectus qui, cum debitis in perspiciatis quos voluptatem. Nesciunt, commodi qui. Quod aliquid pariatur excepturi temporibus perferendis facere animi nobis? Quam, tempora?</p>
+        </div>
+        <div id = "summary">2 div.summary.entry-summary</div>
+        <div id = "tabs">3 div.woocommerce-tabs.wc-tabs-wrapper</div>
+        <div id = "related">4 div.related products</div>
     </div>
 
  

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        div.product {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "a b"
+                "a c"
+                "d d";
+            width: 100%;
+            max-width: 1200px;
+            border: solid thin red;
+        }
+
+        div.product > div {
+            padding: 2rem;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        div.product > div#gallery {
+            grid-area: a;
+            background-color: rgb(183, 211, 236);
+        }
+
+        div.product > div#summary {
+            grid-area: b;
+            height: 100%;
+            background-color: rgb(180, 180, 21);
+        }
+
+        div.product > div#tabs {
+            grid-area: c;
+            background-color: rgb(27, 190, 27);
+            height: 100%;
+        }
+
+        div.product > div#related {
+            grid-area: d;
+            background-color: lightcoral;
+        }
+
+        @media (width <= 800px) {
+            div.product {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product">
+        <div id = "gallery">a Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam sunt neque eos at itaque facere nostrum eum, quo voluptatem quod et provident. Nisi, aspernatur! Et dolor aliquid deserunt aut laudantium nesciunt odio nemo, iure voluptatem repellat obcaecati veniam, sapiente aliquam sint eius totam itaque accusamus blanditiis recusandae vel. In, explicabo quaerat inventore sint ratione totam fugiat eligendi, placeat veritatis non alias animi. Impedit reprehenderit ratione aspernatur dicta deleniti, voluptatibus sed illum fugiat nulla, nostrum eos, soluta sit corrupti earum maxime. Inventore aliquid quae veniam mollitia consectetur! Sit, repellendus eaque quaerat veritatis reiciendis quidem? Cumque ipsum vero, aliquam maiores dignissimos adipisci! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim et fuga soluta saepe inventore, vel deserunt optio vero, beatae ullam libero consectetur cumque aperiam. Ipsa qui voluptatum fuga vel aspernatur repellendus debitis sit amet impedit nihil voluptatem ullam eum eos commodi quidem distinctio reprehenderit officiis autem ab, dolore quibusdam incidunt. Cum quia optio reiciendis ex tempore assumenda necessitatibus iste officia hic labore. Repellat esse eos facere veritatis sed enim? Voluptate explicabo iusto totam ex animi, eius veritatis quas ullam voluptatibus in esse harum tenetur sit ab sequi. Aspernatur repellendus excepturi sapiente incidunt, unde consectetur sit assumenda deleniti, eos libero ab.</div>
+        <div id = "summary">b</div>
+        <div id = "tabs">c Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius placeat debitis consequuntur soluta ipsam fuga suscipit? Earum reprehenderit obcaecati aliquid quia praesentium a cumque? Dolorum porro, ducimus maxime ex fugiat vero placeat consequatur nobis iure, illo minima cumque molestias repudiandae tenetur accusantium. Impedit, dignissimos. Magni ipsam dolor praesentium, optio doloremque repudiandae quo? Explicabo cumque libero doloremque, ex numquam blanditiis sunt earum deleniti, nulla iure praesentium quod facere consequuntur voluptatum. Voluptas ullam dolor distinctio voluptatibus quo nam aspernatur voluptate velit laudantium minima, ab tempora iste corporis doloribus tempore corrupti quia nesciunt quaerat labore, illum iure sequi dolores rerum dignissimos. Maxime, obcaecati.</div>
+        <div id = "related">d</div>
+    </div>
+
+ 
+</body>
+
+</html>
