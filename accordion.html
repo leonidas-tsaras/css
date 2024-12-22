@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightyellow;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+        }
+
+
+
+        section.details {
+            margin: auto;
+            margin-top: 100px;
+            width: 100%;
+            max-width: 600px;
+            > details {
+                width: 100%;
+                > summary {
+                    background-color: brown;
+                    padding: 0.3rem;
+                    color:aliceblue;
+                    cursor: pointer;
+                }
+                > p {
+                    border: thin solid brown;
+                    padding: 0.3rem;
+                }
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class = "details">
+        <details>
+            <summary>System Requirements</summary>
+            <p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended</p>
+        </details>
+        <details>
+            <summary>System Requirements</summary>
+            <p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended</p>
+        </details>
+        <details>
+            <summary>System Requirements</summary>
+            <p>Requires a computer running an operating system. The computer must have some memory and ideally some kind of long-term storage. An input device as well as some form of output device is recommended</p>
+        </details>
+    </section> 
+</body>
+</html>

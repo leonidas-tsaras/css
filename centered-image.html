@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>centered image with inset and margin</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border: none;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightyellow;
+            font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+        }
+
+        div.container {
+            width: 800px;
+            height: 600px;
+            border: solid thin black;
+            position: relative;
+            > img {
+                position: absolute;
+                display: block;
+                width: 70%;
+                height: 70%;
+                inset: 0;
+                margin: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./images/cups.jpg" alt="">
+    </div>
+</body>
+</html>
