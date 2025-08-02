@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>columns</title>
+    <style>
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  --maxWidth: 1400px;
+  --primaryColor: #7d2f2f;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+  color: rgb(126, 126, 126);
+  font-size: 16px;
+}
+
+p {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    column-count: 3;
+    column-gap: 1.5rem;
+    column-rule: dashed thin gray;
+    column-fill: balance;
+}
+
+p img {
+    width: 100%;
+}
+
+@media (width < 800px) {
+    p {
+        column-count: 2;
+    }
+}
+
+@media (width < 500px) {
+    p {
+        column-count: 1;
+    }   
+}
+    </style>
+</head>
+<body>
+
+    <p><img src="./images/hotel1.jpg" alt="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam modi dignissimos optio dicta recusandae ducimus possimus vel laboriosam odio, dolore quaerat atque non tenetur. Amet modi quaerat rem magnam, totam quo. Rem animi tempore officia nulla quia officiis a ullam voluptatum culpa reprehenderit odit labore doloribus amet explicabo pariatur iure, possimus distinctio alias. 
+    
+        Laborum, sequi dolore soluta aliquam deserunt quaerat blanditiis officiis similique aut nobis minus at qui dolor, corporis cum, ad voluptatem culpa eius facilis ipsa fugit. Impedit nostrum voluptas quia ducimus hic est repellendus debitis consectetur similique perspiciatis aliquam tempora praesentium autem suscipit vero quas, cupiditate consequatur corporis ex qui perferendis esse sit aliquid. Fugiat eveniet modi veritatis omnis voluptas nihil, natus ut rerum harum, quo, sit hic! Facere, sit. Quis vitae fugiat commodi nesciunt unde omnis eum quia architecto quo non? Inventore voluptatum omnis ipsa vero esse a nisi totam dolores. Dolorem perferendis unde similique quia, laborum ipsum nobis dolore ex? Quisquam obcaecati nostrum sunt itaque doloribus voluptates esse facilis officiis ad labore deserunt dolor perferendis, dignissimos corrupti velit et quasi repudiandae. Incidunt possimus quibusdam, hic assumenda tempora magni doloribus, ad delectus qui sit esse aliquam non cumque, laborum inventore quod beatae reprehenderit veniam praesentium maiores! Voluptatum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim perferendis molestiae molestias officia unde rem odio quae et. Repellendus similique voluptatem totam quae minima dignissimos neque nesciunt, recusandae iusto! Dolor inventore nostrum magni vero ducimus quaerat sed reiciendis modi minus atque aliquid maxime porro cumque magnam distinctio illum autem, aperiam blanditiis asperiores aspernatur quasi ipsam odio. Aut earum perferendis facilis quo porro inventore vitae doloribus praesentium, accusamus nemo, quisquam, quidem corrupti esse natus temporibus harum maxime sed aliquid obcaecati tempore hic consequuntur. Asperiores totam delectus perspiciatis animi ducimus ea! Porro doloribus laboriosam sit necessitatibus sed reiciendis quam, magni consequuntur molestiae.</p>
+    
+</body>
+</html>

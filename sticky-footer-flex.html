@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Footer with flex</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: Georgia, Times, 'Times New Roman', serif;
+      font-size: 18px;
+      height: 100%;
+    }
+
+    .wrapper {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border: solid 2px green;
+      height: 120px;
+      min-height: 120px;
+    }
+
+    main {
+      flex: 1; /* pushes footer down */
+      padding: 20px;
+      border: solid 2px blue;
+    }
+
+    footer {
+      border: solid 2px red;
+      height: 120px;
+      min-height: 120px;
+      background: #8d8d8d;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <p>header here</p>
+    </header>
+    <main>
+        <p>Short content but footer still sticks!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, voluptatibus culpa officiis labore magnam quis molestiae id optio earum saepe? Accusantium ipsa laboriosam nemo necessitatibus explicabo. Ipsa quasi animi, magni quis iusto labore nisi amet a? Magni, sed pariatur nulla beatae assumenda ad tenetur aut iure? Iure molestiae rem quidem eligendi unde porro fugiat minima. Ut pariatur voluptas libero vitae eligendi distinctio harum at ab nemo quia? Iure ratione, eveniet eos dolorem voluptates repellendus unde ipsa perspiciatis saepe enim, suscipit eum. Ducimus, dolores voluptatibus ullam dolor suscipit ut, distinctio, voluptatum nihil impedit temporibus veniam esse dicta facilis magnam deleniti animi! Dicta saepe nihil, labore reprehenderit voluptas eum distinctio molestiae a. Et unde perferendis ullam facere assumenda quidem neque consequuntur ratione blanditiis beatae reiciendis minus cumque repellendus mollitia eaque, odio obcaecati, recusandae quas amet inventore animi officia quisquam itaque rem? Quidem ducimus numquam quia, omnis iure ut voluptate ipsa eius delectus consequatur porro earum praesentium molestias magni cumque reprehenderit, rem, repudiandae soluta itaque fuga et illum veritatis. Rem beatae quos minima aliquam vel facilis neque doloribus saepe maxime officiis, recusandae ratione fuga tempora soluta nisi, accusantium error qui, ad asperiores. Ut quam ad maxime voluptatem nihil veritatis quos rem totam iure!</p>
+    </main>
+    <footer>
+      Sticky Footer
+    </footer>
+  </div>
+</body>
+</html>
