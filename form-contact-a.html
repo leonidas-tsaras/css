@@ -7,15 +7,26 @@
 		<title>Document</title>
 
 		<style>
+			* {
+				padding: 0px;
+				margin: 0px;
+				border: none;
+				box-sizing: border-box;
+			}
+			body {
+				font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+					sans-serif;
+			}
 			form {
 				width: 100%;
+				max-width: 600px;
 				margin: 2rem auto;
 				padding: 1.5rem;
 				border: solid thin lightgray;
 				background-color: #f6f6f6;
 				font-size: 1rem;
+				box-shadow: 5px 5px 5px rgb(228, 228, 228);
 			}
-			form select,
 			form input {
 				color: var(--firstColor);
 				display: block;
@@ -23,9 +34,6 @@
 				padding: 0.5rem;
 				border: solid thin lightgray;
 				font-size: 1rem;
-			}
-			form input[type="number"] {
-				width: 5rem;
 			}
 			form textarea {
 				display: block;
@@ -45,6 +53,11 @@
 				margin-top: 1rem;
 				cursor: pointer;
 				background-color: lightgray;
+				transition: all 0.5s;
+			}
+			form input[type="submit"]:hover {
+				background-color: gray;
+				color: white;
 			}
 		</style>
 	</head>
